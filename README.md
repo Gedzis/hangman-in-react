@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#Hangman in react
+# Hangman in react
 This project was build for [Vilnius Coding School](https://www.vilniuscoding.lt/) and [Corner Case Technologies](https://www.cornercasetech.com) collaboration for React beginners workshop  
 ## Available Scripts
 

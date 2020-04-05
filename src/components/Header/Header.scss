@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__link {
+     img {
+       max-width: 120px;
+     }
+  }
+}
