@@ -2,11 +2,11 @@ import React, {useEffect, useState} from 'react';
 import VirtualKeyboard from '../VirtualKeyboard/VirtualKeyboard'
 import GameStatusDisplay from '../GameStatusDisplay/GameStatusDisplay';
 import Hangman from "../Hangman/Hangman";
-import {buildHangmanDisplayProps} from "../utils/hangmanCalculations";
-import {generateNewWord} from "../utils/words";
-import {calculateGameStatus, calculateMissedGuesses} from "../utils/gameCalculations";
-import GameStatus from "../utils/gameStatus";
-
+import {buildHangmanDisplayProps} from "../../utils/hangmanCalculations";
+import {generateNewWord} from "../../utils/words";
+import {calculateGameStatus, calculateMissedGuesses} from "../../utils/gameCalculations";
+import GameStatus from "../../utils/gameStatus";
+import './GameBoard.scss'
 
 
 function GameBoard() {

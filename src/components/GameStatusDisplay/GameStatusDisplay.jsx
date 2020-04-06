@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import './GameStatusDisplay.scss'
-import GameStatus from "../utils/gameStatus";
+import GameStatus from "../../utils/gameStatus";
 
 function GameStatusDisplay({word = '', guessedLetters = [], guesses, missed, restartGame, gameStatus}) {
   if(gameStatus === GameStatus.won){
     return (
       <div className="game-status">
         <div className="game-status__game-info">
-          You win!!!! 🤗 🏆 🤗
+          You win!!!! <span role="img" aria-label="You win">🤗 🏆 🤗</span>
         </div>
         <div className="game-status__game-letters">
           {word.split('').map((letter, index)=>{
@@ -24,7 +24,7 @@ function GameStatusDisplay({word = '', guessedLetters = [], guesses, missed, res
   if(gameStatus === GameStatus.lost){
     return (
       <div className="game-status">
-        You lost! Try again😢 😭
+        You lost! Try again <span role="img" aria-label="You lost! Try again ">😢 😭</span>
         <div className="game-status__game-letters">
           {word.split('').map((letter, index)=>{
             return <span className="game-status__game-letters__letter" key={`letter-${index}`}>{letter}</span>
