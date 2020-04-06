@@ -40,7 +40,7 @@ function GameStatusDisplay({word = '', guessedLetters = [], guesses, missed, res
     <div className="game-status">
         <div className="game-status__game-letters">
           {word.split('').map((letter, index)=>{
-            const symbolToDisplay = guessedLetters.includes(letter) ?letter: '_';
+            const symbolToDisplay = guessedLetters.includes(letter) ? letter: '_';
             return <span className="game-status__game-letters__letter" key={`letter-${index}`}>{symbolToDisplay}</span>
           })}
         </div>

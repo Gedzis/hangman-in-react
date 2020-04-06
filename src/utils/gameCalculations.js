@@ -22,7 +22,7 @@ export const isWordGuessed = (word, guessedLetters)=>{
 export const calculateGameStatus = (word = '', guessedLetters)=>{
   const missedAttempts = calculateMissedGuesses(word, guessedLetters);
   if(maxMisses > missedAttempts){
-    return isWordGuessed(word, guessedLetters)? GameStatus.won: GameStatus.inProgress;
+    return isWordGuessed(word, guessedLetters) ? GameStatus.won : GameStatus.inProgress;
   }
   return GameStatus.lost
 }
