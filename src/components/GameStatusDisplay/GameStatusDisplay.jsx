@@ -60,7 +60,9 @@ GameStatusDisplay.propTypes = {
   missed: PropTypes.number.isRequired,
   word: PropTypes.string.isRequired,
   guessedLetters: PropTypes.arrayOf(PropTypes.string),
-  restartGame:  PropTypes.func.isRequired
+  restartGame:  PropTypes.func.isRequired,
+  gameStatus: PropTypes.string.isRequired
+
 }
 
 export default GameStatusDisplay;

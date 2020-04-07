@@ -11,7 +11,6 @@ import './GameBoard.scss'
 
 function GameBoard() {
   const [guessedLetters, setGuessedLetters] = useState([]);
-  const [guesses, setGuesses] = useState(0);
   const [word, setGameWord] = useState('');
   const [gameStatus, setGameStatus] = useState(GameStatus.inProgress);
 
@@ -25,14 +24,13 @@ function GameBoard() {
 
   const onLetterClick = (letter)=>{
     setGuessedLetters([...guessedLetters, letter]);
-    setGuesses(guesses + 1);
   }
   const restartGame = ()=>{
     setGuessedLetters([]);
-    setGuesses(0)
     setGameWord(generateNewWord());
     setGameStatus(GameStatus.inProgress);
   }
+  const guesses = guessedLetters.length;
 
   const missedAttempts = calculateMissedGuesses(word, guessedLetters);
   return (
